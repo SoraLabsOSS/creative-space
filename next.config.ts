@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  cacheComponents: true,
+  experimental: {
+    turbopackFileSystemCacheForBuild: true,
+    turbopackRustReactCompiler: true,
+  },
   reactCompiler: true,
 };
 
